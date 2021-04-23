@@ -1,0 +1,135 @@
+﻿body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    font-family: Consolas;
+}
+
+.navbar {
+    background-color: #00b930;
+    min-height: 50px;
+    z-index: 100;
+    box-shadow: 0 1px 2px 0 #333;
+}
+.navbar > header {
+    font-weight: bold;
+    font-size: 36px;
+    padding: 10px;
+}
+
+.main {
+    flex-grow: 1;
+    max-height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: row;
+}
+
+.side-menu {
+    background-color: #31f564;
+    min-width: 100px;
+    z-index: 50;
+    box-shadow: 1px 0 2px 0 #333;
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+}
+
+.room-button {
+    color: white;
+    border: 1px solid #35a051;
+    border-radius: 10px;
+    width: 67px;
+    height: 67px;
+    margin: 0.75rem 1rem 0;
+    background-color: #31f52f;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 3px 1px #333;
+}
+
+.room-button > strong {
+    font-size: 36px;
+}
+
+    .room-button:hover {
+        box-shadow: 0 2px 3px 1px #666;
+    }
+
+.chat {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+}
+
+.chat-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+    overflow: auto;
+    max-height: 100vh;
+}
+
+.chat-input {
+    background-color: #00b930;
+    box-shadow: 0 -1px 2px 0 #111;
+    min-height: 60px;
+    max-height: 60px;
+    display: flex;
+    flex-direction: row;
+}
+
+    .chat-input > input {
+        margin: 10px;
+        flex-grow: 1;
+        color: white;
+        background-color: #00b930;
+        border: 1px solid #01ff51;
+        border-radius: 5px;
+    }
+    .chat-input > button {
+        margin: 10px;
+        color: white;
+        background-color: #31f52f;
+        border: 1px solid #35a051;
+        border-radius: 2px;
+        box-shadow: 0 1px 3px 1px #333;
+    }
+.message {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.15rem;
+}
+
+.message:first-child {
+    margin-top: auto;
+}
+
+.message > * {
+    padding: 0.15rem;
+}
+
+    .message > header {
+        font-weight: bold;
+        min-width: 100px;
+        width: 100px;
+        text-align: right;
+    }
+
+.message > p {
+    margin: 0;
+    flex-grow: 5;
+}
+
+.message > footer {
+    min-width: 60px;
+    width: 60px;
+    text-align: center;
+}
