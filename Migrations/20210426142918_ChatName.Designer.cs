@@ -10,8 +10,8 @@ using TestingChatService.DataBase;
 namespace TestingChatService.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20210426060133_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20210426142918_ChatName")]
+    partial class ChatName
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -158,6 +158,12 @@ namespace TestingChatService.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Type")
+                        .HasColumnType("int");
 
                     b.HasKey("ID");
 

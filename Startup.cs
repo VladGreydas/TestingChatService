@@ -23,6 +23,9 @@ namespace TestingChatService
         public void ConfigureServices(IServiceCollection services)
         {
             var connectionString = _config.GetConnectionString("DefaultConnection");
+
+            services.AddMvc();
+
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connectionString));
 
             services.AddIdentity<User, IdentityRole>()

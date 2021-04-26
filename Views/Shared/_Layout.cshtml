@@ -11,17 +11,27 @@
         <header><strong><em>GachiGramm</em></strong></header>
     </div>
     <div class="main">
-        <div class="side-menu">
-            <a class="room-button" href="#">
-                Room
-            </a>
-            <a class="room-button" href="#">
-                <strong>+</strong>
-            </a>
-        </div>
+        <vc:room></vc:room>
         <div class="chat">
             @RenderBody()
         </div>
     </div>
+    <div class="modal" id="create-room-modal">
+        
+        <form asp-controller="Home" asp-action="CreateRoom" class="modal-body">
+            <button type="button" class="close" onclick="closeModal()">X</button>
+            <header>Create New Room</header>
+            <div>
+                <input name="name">
+            </div>
+            <footer>
+                <button>Create</button>
+            </footer>
+        </form>
+    </div>
+
+    <script src="~/js/site.js"></script>
+    @RenderSection("Scripts", false)
+
 </body>
 </html>
